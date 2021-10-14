@@ -8,6 +8,4 @@
 ## src1版本预览图
 ![src1版本预览图](https://i.loli.net/2021/10/09/GUBKTh95q8ikCL7.png)
 
-## src版本
-
 [![pbootcms GitHub stats](https://github-readme-stats.vercel.app/api?username=T-Y-P)](https://github.com/T-Y-P/pbootcms-background-login)
