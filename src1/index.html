@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <title>运营管理中心</title>
+    <link href="/favicon.ico" rel="icon" />
+    <link href="{APP_THEME_DIR}/home/css/all.css" crossorigin="anonymous"  rel="stylesheet" />
+    <link href="{APP_THEME_DIR}/home/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="{APP_THEME_DIR}/home/css/styles.css?v=5" rel="stylesheet" />
+    <script type="text/javascript" src="{APP_THEME_DIR}/js/jquery-1.12.4.min.js"></script>
+</head>
+<style>
+    .absolute-bottom-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  }
+.font-weight-bold{
+    font-weight:500;
+}
+</style>
+
+
+<body>
+<div id="nm-preloader" class="nm-aic nm-vh-md-100" style="display: none">
+    <div class="nm-ripple" style="display: none">
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<main id="page-content" class="d-flex nm-aic nm-vh-md-100">
+    <!-- // Form side -->
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-10 offset-md-1 col-lg-10 offset-lg-1  col-xl-10 offset-xl-1 nm-st nm-st-md">
+                <!-- // Logo自行添加 -->
+               <!-- <div id="logo-container">
+                    <a class="d-flex" href=" " aria-label="Nimoy">
+                        <img src=" " alt="Logo" />
+                    </a>
+                </div>  -->
+
+                <form action="{url./admin/Index/login}"  onsubmit="return false" class="layui-form" id="dologin">
+                    <input type="hidden" name="formcheck" id="formcheck" value="{$formcheck}" > 
+
+                    <div class="nm-mb-2 nm-mb-md-2">
+                        <h1>运营管理中心</h1>
+                        <p>输入您的用户名/邮箱/手机和密码以访问帐户</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputUser">账户</label>
+                        <input name="username" id="username" type="text" lay-verify="required" placeholder="输入您的用户名/邮箱/手机和密码以访问帐户" autocomplete="off" class="layui-input form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputUser">密码</label>
+                        <input name="password" id="password" type="password" lay-verify="required" placeholder="密码" autocomplete="off" class="layui-input form-control">
+                    </div>
+
+                    {if([$config.admin_check_code])}
+                    <div class="form-group">
+                        <label for="inputUser">验证码</label>
+                <input name="text" id="checkcode" type="checkcode" lay-verify="required" placeholder="验证码" autocomplete="off" class="layui-input form-horizontal">
+     <img title="点击刷新"  src="{CORE_DIR}/code.php" class="user-login-codeimg codeimg" id="codeimg" onclick="this.src='{CORE_DIR}/code.php?'+Math.round(Math.random()*10);" />
+     </div>
+              {/if}
+    <button type="button" class="btn btn-primary btn-block nm-hvr nm-btn-1" id="login" lay-submit lay-filter="login-submit">  登录 </button>  
+</div>
+<div class="text-center mt-5 text-small">
+    Copyright © 2021 小筑
+    <div class="mt-2" id="copyright">Powered by <a href="https://gitee.com/czidc/pbootcms-background-login">CZIDC</a>  </div>
+  </div> </form>
+        </div>
+        </div>
+ 
+    <div id="non-form-side" class="col-lg-6 col-xl-8 d-none d-lg-flex nm-aic nm-vh-100">
+        <div class="overlay"></div>
+        <div class="absolute-bottom-left index-2">
+            <div class="text-light p-5 pb-2">
+              <div class="mb-5 pb-3">
+                  <h1 class="mb-2 display-4 font-weight-bold" id="sj"> </h1>
+                <h5 class="font-weight-normal text-muted-transparent">Admin</h5>
+              </div>
+            </div>
+          </div>
+    </div>
+
+</main>
+<script type="text/javascript" src="{APP_THEME_DIR}/layui/layui.all.js?v=v2.5.4"></script> 
+<script type="text/javascript" src="{APP_THEME_DIR}/js/mylayui.js?v=v1.1.6"></script>
+<script>
+	var date=new Date();
+	var hour=date.getHours();
+	var str='';
+	if(hour<4){
+		str=' Good morning! ';
+	}else if(hour<12){
+		str=' good morning ！';
+	}else if(hour<13){
+		str='Good noon! ';
+	}else if(hour<16){
+		str='Good afternoon！';
+	}else if(hour<20){
+		str=' Good evening ！';
+	}else{
+		str="It's too late. Have a rest! " ;
+	}
+    document.getElementById("sj").innerHTML = str;
+        </script>
+</body>
+
+</html>

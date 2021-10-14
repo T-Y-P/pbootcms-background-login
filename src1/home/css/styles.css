@@ -1,0 +1,548 @@
+/***********************************************************
+ *
+ * Project name: 	Nimoy · Login & Register Form HTML Template
+ * Decription: 		HTML | Miscellaneous Template for ThemeForest.net
+ * Author: 			ceosDesigns
+ * Link:			http://nimoy.ceosdesigns.sk/ 
+ * Version:			1.00
+ *
+ ************************************************************/
+ 
+/************************************************************
+ *
+ * *****************
+ * TABLE OF CONTENTS
+ * *****************
+ *
+ *  01. GENERAL
+ *
+ *  02. PRELOADER
+ *
+ *  03. LAYOUT
+ *  	03.01 NON-FORM SIDE
+ *  	03.02 FORM SIDE
+ *
+ *  04. ELEMENTS
+ *  	04.00 TEXT-RELATED
+ *  	04.01 LOGO
+ *  	04.02 FORM INPUTS
+ *  	04.03 FORM CHECK
+ *  	04.04 BUTTON 
+ * 		04.05 SOCIAL
+ * 
+ *  05. MEDIA QUERIES
+ 
+ ************************************************************/
+
+/*****************************/
+/*  01. GENERAL              */
+/*****************************/
+
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+	height: 100%;
+	font-size: 0.875rem;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	line-height: 1.6;
+	color: #677788;
+	text-align: left;
+}
+
+h2 {
+	color: #1e2022;
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+
+h3 {
+	font-size: 0.875rem;
+	font-weight: 400;
+	color: #677788;
+}
+
+a {
+	text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color: #0069d9;
+    text-decoration: none;
+}
+
+label {
+    display: block;
+    color: #1e2022;
+    font-size: 0.875rem;
+	margin-bottom: .5rem;
+}
+
+/*****************************/
+/*  02. PRELOADER            */
+/*****************************/
+
+#nm-preloader {
+	display: flex;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 0px;
+	left: 0px;
+	z-index: 11;
+	background-color: #fff;
+	justify-content: center;
+}
+
+.nm-ripple {
+	display: inline-block;
+	position: relative;
+	width: 80px;
+	height: 80px;
+}
+
+.nm-ripple div {
+	position: absolute;
+	border: 4px solid #007bff;
+	opacity: 1;
+	border-radius: 50%;
+	animation: nm-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.nm-ripple div:nth-child(2) {
+	animation-delay: -0.5s;
+}
+
+@keyframes nm-ripple {
+	0% {
+	  	top: 36px;
+	  	left: 36px;
+	  	width: 0;
+	  	height: 0;
+	  	opacity: 1;
+	}
+	100% {
+	  	top: 0px;
+	  	left: 0px;
+	  	width: 72px;
+	  	height: 72px;
+	  	opacity: 0;
+	}
+}
+
+/*****************************/
+/*  03. LAYOUT               */
+/*****************************/
+
+	/*****************************/
+	/*  03.01 NON-FORM SIDE      */
+	/*****************************/
+
+	#non-form-side {
+		position: relative;
+		background-image: url("https://www.czmz.top/api/pic");
+		background-size: cover;
+		background-position: center;
+	}
+	
+	#non-form-side .overlay{
+		position: absolute;
+		top: 0px; 
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		background-image: url('../images/overlay.png');
+		opacity: 30%;
+	}
+
+	/*****************************/
+	/*  03.02 FORM SIDE          */
+	/*****************************/
+
+	#form-side {
+		background-color: #ffffff;
+	}
+
+	.form-group {
+		margin-bottom: 1.5rem;
+	}
+
+	.nm-mb-0 {
+		margin-bottom: 0rem !important;
+	}
+
+	.nm-mb-1 {
+		margin-bottom: 1rem !important;
+	}
+
+	.nm-mb-2 {
+		margin-bottom: 2rem !important;
+	}
+
+	.nm-aic {
+		align-items: center;
+	}
+
+	.nm-jcb {
+		justify-content: space-between !important;
+	}
+
+	.nm-vh-100 {
+		height: 100vh;
+	}
+
+	.nm-st {
+		padding-top: 8rem !important;
+		padding-bottom: 8rem !important;
+	}
+
+	.nm-spcr {
+		margin-top: 2rem;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	
+	footer {
+		position: fixed !important;
+		text-align: center;
+		background-color: #ffffff;
+		bottom: 0px;
+		padding: 0.75rem 1rem;
+		width: 100%;
+	}
+
+/*****************************/
+/* 04. ELEMENTS              */
+/*****************************/
+
+	/*****************************/
+	/*  04.00 TEXT-RELATED       */
+	/*****************************/
+
+	.nm-lu {
+		color: #8c98a4;
+		border-bottom: 0.0625rem dashed #97a4af;
+	}
+
+	.nm-lu:hover {
+		border-color: #0052ea;
+	}
+
+	.nm-ct {
+		text-transform: capitalize !important;
+	}
+
+	.nm-fs-1 {
+		font-size: 0.875rem;
+	}
+
+	.nm-tm {
+		color: #8c98a4 !important;
+	}
+
+	.nm-fw-bd {
+		font-weight: 600 !important;
+	}
+
+	.nm-fal {
+		margin-right: 0.25rem !important;
+		font-size: .875em;
+	}
+
+	.nm-hvr {
+		transition: all 0.2s ease-in-out;
+	}
+	
+	.nm-hvr:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 4px 11px rgba(0,123,255, 0.35);
+	}
+
+	/*****************************/
+	/*  04.01 LOGO               */
+	/*****************************/
+
+	#logo-container {
+		position: absolute;
+		top: 24px;
+		z-index: 10;
+	}
+	
+	#logo-container img{
+		height: 50px;
+	}
+
+	/*****************************/
+	/*  04.02 FORM INPUTS        */
+	/*****************************/
+
+	.form-control {
+		background-color: #ffffff;
+		border: 0.0625rem solid #eeeeff;
+		border-radius: 0.3125rem;
+		font-size: 0.875rem;
+		font-weight: 400;
+		line-height: 1.6;
+		color: #1e2022;
+		padding: 0.5rem 1rem;
+		height: 2.5rem;
+	}
+	
+	.form-control:focus {
+		color: #1e2022;
+		background-color: #fff;
+		outline: 0;
+		box-shadow: 0 0 10px rgba(0,123,255,.1);
+	}
+	
+	.form-control::-webkit-input-placeholder {
+		color: #97a4af;
+		opacity: 1;
+	}
+	
+	.form-control::-moz-placeholder {
+		color: #97a4af;
+		opacity: 1;
+	}
+	
+	.form-control:-ms-input-placeholder {
+		color: #97a4af;
+		opacity: 1;
+	}
+	
+	.form-control::-ms-input-placeholder {
+		color: #97a4af;
+		opacity: 1;
+	}
+	
+	.form-control::placeholder {
+		color: #97a4af;
+		opacity: 1;
+	}
+
+	/*****************************/
+	/*  04.03 FORM CHECK         */
+	/*****************************/
+
+	.form-check {
+		position: relative;
+	}
+	
+	.form-check input[type='checkbox'] {
+		position: absolute;
+		left: 0;
+		z-index: -1;
+		width: 1rem;
+		height: 1.3rem;
+		opacity: 0;
+	}
+	
+	.nm-check {
+		cursor: pointer;
+	}
+	
+	.nm-check::before {
+		border-radius: 0.25rem;
+		transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+		position: absolute;
+		top: 0.1875rem;
+		left: 0rem;
+		display: block;
+		width: 1rem;
+		height: 1rem;
+		pointer-events: none;
+		content: "";
+		background-color: #fff;
+		border: #d6dbeb solid 0.0625rem;
+	}
+	
+	.nm-check::after {
+		position: absolute;
+		top: 0.1875rem;
+		left: 0rem;
+		display: block;
+		width: 1rem;
+		height: 1rem;
+		content: "";
+		background: no-repeat 50% / 50% 50%;
+	}
+	
+	.form-check input:checked ~ .nm-check::before {
+		color: #fff;
+		border-color: #007bff;
+		background-color: #007bff;
+	}
+	
+	.form-check input:checked ~ .nm-check::after {
+		background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/%3e%3c/svg%3e");
+	}
+    .form-horizontal{
+		background-color: #ffffff;
+		border: 0.0625rem solid #eeeeff;
+		border-radius: 0.3125rem;
+		font-size: 0.875rem;
+		font-weight: 400;
+		line-height: 1.6;
+		color: #1e2022;
+		padding: 0.5rem 1rem;
+		height: 2.5rem;
+		width: 65%;
+	}
+	.codeimg{width: 95px;}
+	/*****************************/
+	/*  04.04 BUTTON             */
+	/*****************************/
+
+	.nm-btn-1 {
+		display: inline-block;
+		font-weight: 600;
+		text-align: center;
+		vertical-align: middle;
+		user-select: none;
+		padding: 0.5rem 1rem;
+		font-size: 0.875rem;
+		line-height: 1.6;
+		border-radius: 0.3125rem;
+		width: 100%;
+	}
+	
+	.nm-btn-1:focus,.nm-btn-1:active {
+		box-shadow: none;
+	}
+	
+	.btn-primary:not(:disabled):not(.disabled):active:focus {
+		box-shadow: none;
+	}
+
+	/*****************************/
+	/*  04.05 SOCIAL             */
+	/*****************************/
+
+	.social-buttons,
+	.social-buttons li {
+		display: flex;
+		padding: 0;
+		margin: 0;
+	}
+
+	.social-buttons {
+		width: 100%;
+		list-style: none;
+		flex-wrap: wrap;
+	}
+
+	ul.social-buttons {
+		justify-content: center;
+		text-align: center;
+	}
+
+	.social-buttons li {
+		flex-basis: 20%;
+		flex-shrink: 0;
+		margin: 2px; 
+	}
+
+	.social-buttons li:first-child {
+		margin-left: 0px; 
+	}
+
+	.social-buttons li:last-child {
+		margin-right: 0px; 
+	}
+
+	.social-buttons a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		padding: 0.5rem 1rem;
+		font-weight: 500;
+		text-decoration: none;
+		color: #fff;
+		border-radius: 0.3125rem;
+	}
+
+	.social-buttons a:hover{
+		color: #fff;
+	}
+
+	/* QQ */
+	.social-buttons .qq {
+		background: #1da1f2;
+	}
+
+	/* WEIXIN */
+	.social-buttons .wx {
+		background: #65da79;
+	}
+
+	/* Phone */
+	.social-buttons .phone {
+		background: #FF9900;
+	}
+
+
+/*****************************/
+/*  05. MEDIA QUERIES        */
+/*****************************/
+
+@media (min-width: 576px){	
+	.nm-sm-tr {
+		text-align: right !important;
+	}
+	
+	.nm-mb-sm-0 {
+		margin-bottom: 0rem !important;
+	}
+}
+
+@media (min-width: 768px){
+	.nm-mb-md-2 {
+		margin-bottom: 3rem !important;
+	}
+	
+	.nm-vh-md-100 {
+		height: 100vh;
+	}
+	
+	.nm-st-md {
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+	}
+
+	#logo-container {
+		position: fixed;
+	}
+
+	footer {
+		position: fixed !important;
+	}
+}
+.form-group{
+	position: relative;
+}
+.form-group .captcha{
+	position: absolute;
+	right: 0;
+	top: 31px;
+}
+.sended-code{
+	background-color: #7babf1;
+	border-color: #7babf1;
+}
+/*** 消除input元素 type="number" 时默认的 加减按钮*/
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/*** 消除input元素 type="number" 时默认的 加减按钮---moz版*/
+input[type=number] {
+    -moz-appearance:textfield;
+}
