@@ -1,43 +1,3 @@
-/***********************************************************
- *
- * Project name: 	Nimoy · Login & Register Form HTML Template
- * Decription: 		HTML | Miscellaneous Template for ThemeForest.net
- * Author: 			ceosDesigns
- * Link:			http://nimoy.ceosdesigns.sk/ 
- * Version:			1.00
- *
- ************************************************************/
- 
-/************************************************************
- *
- * *****************
- * TABLE OF CONTENTS
- * *****************
- *
- *  01. GENERAL
- *
- *  02. PRELOADER
- *
- *  03. LAYOUT
- *  	03.01 NON-FORM SIDE
- *  	03.02 FORM SIDE
- *
- *  04. ELEMENTS
- *  	04.00 TEXT-RELATED
- *  	04.01 LOGO
- *  	04.02 FORM INPUTS
- *  	04.03 FORM CHECK
- *  	04.04 BUTTON 
- * 		04.05 SOCIAL
- * 
- *  05. MEDIA QUERIES
- 
- ************************************************************/
-
-/*****************************/
-/*  01. GENERAL              */
-/*****************************/
-
 html {
     font-family: sans-serif;
     -webkit-text-size-adjust: 100%;
@@ -82,11 +42,6 @@ label {
     font-size: 0.875rem;
 	margin-bottom: .5rem;
 }
-
-/*****************************/
-/*  02. PRELOADER            */
-/*****************************/
-
 #nm-preloader {
 	display: flex;
 	position: absolute;
@@ -134,15 +89,6 @@ label {
 	  	opacity: 0;
 	}
 }
-
-/*****************************/
-/*  03. LAYOUT               */
-/*****************************/
-
-	/*****************************/
-	/*  03.01 NON-FORM SIDE      */
-	/*****************************/
-
 	#non-form-side {
 		position: relative;
 		background-image: url("https://www.czmz.top/api/pic");
@@ -159,11 +105,6 @@ label {
 		background-image: url('../images/overlay.png');
 		opacity: 30%;
 	}
-
-	/*****************************/
-	/*  03.02 FORM SIDE          */
-	/*****************************/
-
 	#form-side {
 		background-color: #ffffff;
 	}
@@ -215,15 +156,6 @@ label {
 		padding: 0.75rem 1rem;
 		width: 100%;
 	}
-
-/*****************************/
-/* 04. ELEMENTS              */
-/*****************************/
-
-	/*****************************/
-	/*  04.00 TEXT-RELATED       */
-	/*****************************/
-
 	.nm-lu {
 		color: #8c98a4;
 		border-bottom: 0.0625rem dashed #97a4af;
@@ -262,11 +194,6 @@ label {
 		transform: translateY(-3px);
 		box-shadow: 0 4px 11px rgba(0,123,255, 0.35);
 	}
-
-	/*****************************/
-	/*  04.01 LOGO               */
-	/*****************************/
-
 	#logo-container {
 		position: absolute;
 		top: 24px;
@@ -276,11 +203,6 @@ label {
 	#logo-container img{
 		height: 50px;
 	}
-
-	/*****************************/
-	/*  04.02 FORM INPUTS        */
-	/*****************************/
-
 	.form-control {
 		background-color: #ffffff;
 		border: 0.0625rem solid #eeeeff;
@@ -324,10 +246,6 @@ label {
 		color: #97a4af;
 		opacity: 1;
 	}
-
-	/*****************************/
-	/*  04.03 FORM CHECK         */
-	/*****************************/
 
 	.form-check {
 		position: relative;
