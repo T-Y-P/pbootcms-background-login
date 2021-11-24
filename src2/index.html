@@ -1,0 +1,47 @@
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>管理员登陆</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/T-Y-P/pbootcms-background-login@1.5/src2/css/common.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/T-Y-P/pbootcms-background-login@1.5/src2/css/iconfont.css"/>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/T-Y-P/pbootcms-background-login@1.5/src2/js/jquery-1.11.3.min.js"></script>
+</head>
+<body style="background:url(https://z3.ax1x.com/2021/10/11/5VbrRA.jpg) no-repeat center bottom;">
+<div class="clear"></div>	
+<div class="fws_login_mian">
+	<div class="cen" style=" width: 1200px; margin: 0 auto;">
+		<div class="logint">后台管理系统登录</div>
+		<div class="login_qd">
+			<form action="{url./admin/Index/login}"  onsubmit="return false" class="layui-form" id="dologin">
+				<input type="hidden" name="formcheck" id="formcheck" value="{$formcheck}" > 
+			<div class="login_input">
+			<div class="login_in">
+			<input name="username" id="username" type="text" lay-verify="required" placeholder="输入您的用户名/邮箱/手机和密码以访问帐户" autocomplete="off" class="layui-input form-control">
+			</div>
+
+			<div class="login_in">
+			<input name="password" id="password" type="password" lay-verify="required" placeholder="密码" autocomplete="off" class="layui-input form-control">
+			</div>
+			{if([$config.admin_check_code])}
+		   <div class="login_in">
+			   <input class="i1 picCode" type="checkcode" placeholder="图形验证码"  id="checkcode"  autocomplete="off"><b class="check_code hand">
+          <img title="点击刷新"  src="{CORE_DIR}/code.php" style="width:120px;height:46px" id="codeimg" onclick="this.src='{CORE_DIR}/code.php?'+Math.round(Math.random()*10);" />
+           </b></div> 
+            {/if}
+<div class="login_bnt login_btn"><a   class="btn_sms_login" type="button"  id="login" lay-submit lay-filter="login-submit">立即登录</a></div>
+			<div class="login_in" style="height: 20px;">
+				Copyright © 2021 小筑 Powered by <a href="https://gitee.com/czidc/pbootcms-background-login">gitee</a>  <a href="https://github.com/T-Y-P/pbootcms-background-login">github</a>
+				</div>
+		</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+</body>
+<script type="text/javascript" src="{APP_THEME_DIR}/layui/layui.all.js?v=v2.5.4"></script> 
+<script type="text/javascript" src="{APP_THEME_DIR}/js/mylayui.js?v=v1.1.6"></script>
+</html>
